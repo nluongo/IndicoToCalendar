@@ -15,19 +15,24 @@ from helpers import build_indico_request
 SCOPES = ['https://www.googleapis.com/auth/calendar',
           'https://www.googleapis.com/auth/calendar.events']
 
-source_mailbox_path = os.path.expanduser('~/.thunderbird/fil23ysa.default-release/Mail/Local Folders/CalendarImport')
-dest_mailbox_path = os.path.expanduser('~/.thunderbird/fil23ysa.default-release/Mail/Local Folders/CalendarImport-Post')
+# Path to mailbox file to read emails from and to move after processing
+source_mailbox_path = os.path.expanduser('')
+dest_mailbox_path = os.path.expanduser('')
 
+# Standard regex string for identifying indico events in email text
 url_regex_string = '.*https://indico.cern.ch/event/.*/.*'
 url_regex_compiled = re.compile(url_regex_string)
 
-event_file_path = '/home/nicholas/Downloads'
+# Path to download indico event .ics file to on your local system
+event_file_path = ''
 event_regex_string = 'event*.ics'
-google_calendar_id = '296s1t3eakodu3jcor1k9gu36c@group.calendar.google.com'
+
+# ID of your Google calendar
+google_calendar_id = ''
 
 # Indico API variables
-INDICO_API_KEY = '8cdafe0d-0c21-4603-9398-ed6e2a388d0b'
-INDICO_SECRET_KEY = '7b7f63c1-1be0-4bae-a754-d9aae027506b'
+INDICO_API_KEY = ''
+INDICO_SECRET_KEY = ''
 INDICO_PARAMS = {
     'limit': 123
 }
